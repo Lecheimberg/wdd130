@@ -40,7 +40,6 @@ article {
 }
 
 /* Header */
-
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -56,16 +55,17 @@ header img {
 nav {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: var(--accent1-color);
     font-weight: bold;
+    padding: 0.5rem 1rem;
 }
 
 /* Hero */
-
 .hero {
     position: relative;
 }
@@ -103,8 +103,39 @@ nav a {
     box-shadow: 2px 2px 6px gray;
 }
 
-/* Sections */
+/* History */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: center;
+}
 
+.history-content img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+/* Adventures */
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.adventure-gallery figure {
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Sections */
 section {
     padding: 20px;
 }
@@ -115,13 +146,18 @@ section h2 {
 }
 
 /* Footer */
-
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
     border-top: 1px solid #ccc;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .socialmedia a {
