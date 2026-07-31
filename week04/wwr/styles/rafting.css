@@ -16,19 +16,19 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background: #f7fbfb;
 }
 
 header,
 main,
 footer {
-    width: 840px;
+    width: min(840px, 92%);
     margin: 0 auto;
 }
 
-/* Headings */
-
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
@@ -37,14 +37,15 @@ p {
     line-height: 1.5;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: center;
     background-color: var(--secondary-color);
     padding: 10px;
+    margin-top: 16px;
+    border-radius: 12px;
 }
 
 header img {
@@ -54,6 +55,8 @@ header img {
 header nav {
     display: flex;
     justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 header nav a {
@@ -67,22 +70,24 @@ header nav a:hover {
     color: var(--primary-color);
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero {
     position: relative;
+    margin-top: 20px;
 }
 
 .hero > img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 12px;
 }
 
 .hero h1 {
     position: absolute;
     top: 20px;
-    width: 100%;
+    left: 0;
+    right: 0;
     padding: 15px;
     text-align: center;
     background-color: rgba(7, 59, 76, 0.8);
@@ -91,11 +96,12 @@ header nav a:hover {
 
 .hero article {
     position: absolute;
-    bottom: 25px;
-    left: 25px;
-    right: 25px;
-    background-color: rgba(255, 255, 255, 0.85);
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 15px;
+    border-radius: 12px;
 }
 
 .hero article img {
@@ -104,15 +110,18 @@ header nav a:hover {
     margin-left: 15px;
     border: 2px solid var(--primary-color);
     box-shadow: 2px 2px 8px gray;
+    border-radius: 8px;
 }
 
-/* ================= HISTORY ================= */
-
-.history {
-    padding: 20px;
+/* HISTORY / INFO GRID */
+.history,
+.trip-section {
+    padding: 20px 0;
 }
 
-.history h2 {
+.history h2,
+.trip-section h2,
+.contact-grid h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -126,13 +135,12 @@ header nav a:hover {
 
 .history-content img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-/* ================= ADVENTURES ================= */
-
+/* ADVENTURES */
 .adventures {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .adventures h2 {
@@ -154,7 +162,7 @@ header nav a:hover {
     width: 100%;
     height: 120px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .adventure-gallery figcaption {
@@ -162,13 +170,97 @@ header nav a:hover {
     font-size: 0.9rem;
 }
 
-/* ================= FOOTER ================= */
+/* TRIP CARDS */
+.trip-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
 
+.trip-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.trip-card h3 {
+    margin-bottom: 8px;
+}
+
+/* CONTACT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.contact-info,
+.contact-form {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #09563f;
+}
+
+/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    gap: 16px;
+    padding: 15px 0 25px;
     margin-top: 20px;
     border-top: 1px solid #ccc;
 }
@@ -189,4 +281,50 @@ footer p {
 .socialmedia img {
     width: 32px;
     height: 32px;
+}
+
+@media (max-width: 800px) {
+
+    .history-content,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 12px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .adventure-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero article {
+        position: static;
+        margin-top: 12px;
+    }
+
+    .hero h1 {
+        position: static;
+        margin-bottom: 12px;
+    }
+
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 0 0 12px 0;
+        width: 100%;
+    }
 }
