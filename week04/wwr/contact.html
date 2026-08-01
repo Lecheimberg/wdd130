@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Contact White Water Rafting to book a trip or ask questions about our adventures.">
+      content="Contact White Water Rafting for trip reservations, questions, and adventure planning help.">
     <meta name="author" content="Lucas Perez Echeimberg">
-    <title>Contact Us | White Water Rafting</title>
+    <title>Contact White Water Rafting | Reservations & Questions</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
@@ -25,11 +25,12 @@
 
     <main>
         <section class="hero">
-            <img src="images/hero.jpg" alt="Contact us for rafting trips">
+            <img src="images/hero.jpg" alt="White water rafting adventure">
+
             <h1>Contact Us</h1>
 
             <article>
-                <img src="images/happy-client.jpg" alt="Happy client rafting">
+                <img src="images/happy-client.jpg" alt="Happy client enjoying rafting">
                 <p>
                     Have questions or want to book a trip? Reach out to our team and we will help
                     you plan your next white water adventure.
@@ -37,69 +38,98 @@
             </article>
         </section>
 
-        <section class="contact-grid">
-            <div class="contact-info">
+        <section class="contact-main">
+            <div class="contact-details">
                 <h2>Get in Touch</h2>
-                <p><strong>Email:</strong> <a
-                      href="mailto:info@whitewaterrafting.com">info@whitewaterrafting.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
-                <p><strong>Location:</strong> 123 River Road, Utah</p>
+
+                <address>
+                    <p><strong>White Water Rafting</strong></p>
+                    <p>123 River Road</p>
+                    <p>Moab, UT 84532</p>
+                    <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p><a href="mailto:info@whitewaterrafting.com">info@whitewaterrafting.com</a>
+                    </p>
+                </address>
+
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps?q=Moab%2C%20Utah&output=embed"
+                      title="Google map showing White Water Rafting location" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
 
             <div class="contact-form">
                 <h2>Send Us a Message</h2>
 
                 <form>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name">
+                    <div class="form-row">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email">
+                    <div class="form-row">
+                        <label for="useremail">Email Address</label>
+                        <input type="email" id="useremail" name="useremail" required>
+                    </div>
 
-                    <label for="trip">Trip of Interest</label>
-                    <select id="trip" name="trip">
-                        <option>Half Day Adventure</option>
-                        <option>Full Day Rapids</option>
-                        <option>Rapid Runner</option>
-                        <option>Group Booking</option>
-                    </select>
+                    <fieldset class="form-group">
+                        <legend>Purpose of the Message</legend>
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5"
-                      placeholder="Write your message here"></textarea>
+                        <div class="radio-option">
+                            <input type="radio" id="general-inquiry" name="purpose"
+                              value="general-inquiry" required>
+                            <label for="general-inquiry">General Inquiry</label>
+                        </div>
 
-                    <button type="submit">Send Message</button>
+                        <div class="radio-option">
+                            <input type="radio" id="reservation-question" name="purpose"
+                              value="reservation-question">
+                            <label for="reservation-question">Reservation Question</label>
+                        </div>
+
+                        <div class="radio-option">
+                            <input type="radio" id="website-suggestion" name="purpose"
+                              value="website-suggestion">
+                            <label for="website-suggestion">Website Suggestion</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                          placeholder="Write your message here" required></textarea>
+                    </div>
+
+                    <div class="form-row checkbox-row">
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            Please subscribe me to the monthly newsletter
+                        </label>
+                    </div>
+
+                    <button type="submit">Get in Touch!</button>
                 </form>
             </div>
         </section>
 
-        <section class="trip-section">
-            <h2>Why Contact Us?</h2>
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
 
-            <div class="adventure-gallery">
+            <div class="team-gallery">
                 <figure>
-                    <img src="images/rafting.jpeg" alt="Rafting trip image">
-                    <figcaption>Safe & Fun</figcaption>
+                    <img src="images/rafting1.jpg" alt="River guide posing near the water">
+                    <figcaption>Emma Carter — Lead Guide</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/rafting2.jpg" alt="Family rafting experience">
-                    <figcaption>Family Friendly</figcaption>
+                    <img src="images/rafting2.jpg" alt="Rafting team member smiling outdoors">
+                    <figcaption>Lucas Bennett — Safety Instructor</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/rafting3.jpeg" alt="Exciting rapid">
-                    <figcaption>Exciting Rapids</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/rafting4.jpeg" alt="Adventure group">
-                    <figcaption>Group Trips</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/rafting1.jpg" alt="Guide and guests">
-                    <figcaption>Expert Guides</figcaption>
+                    <img src="images/rafting3.jpeg" alt="Team member standing with rafting gear">
+                    <figcaption>Sophia Reed — Trip Coordinator</figcaption>
                 </figure>
             </div>
         </section>
