@@ -7,16 +7,27 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     background: #f7fbfb;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 header,
@@ -31,6 +42,7 @@ h2,
 h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    line-height: 1.2;
 }
 
 p {
@@ -40,91 +52,110 @@ p {
 /* HEADER */
 header {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 140px 1fr;
     align-items: center;
+    gap: 16px;
     background-color: var(--secondary-color);
-    padding: 10px;
+    padding: 16px 20px;
     margin-top: 16px;
-    border-radius: 12px;
+    border: 1px solid #8a8a8a;
 }
 
 header img {
     width: 120px;
+    height: auto;
+    margin: 0 auto;
 }
 
 header nav {
     display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
 header nav a {
+    flex: 1 1 100px;
+    text-align: center;
     text-decoration: none;
     color: var(--accent1-color);
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #666;
 }
 
 header nav a:hover {
-    color: var(--primary-color);
+    background: var(--accent2-color);
+    color: var(--accent1-color);
 }
 
 /* HERO */
 .hero {
     position: relative;
-    margin-top: 20px;
+    margin-top: 12px;
+    border: 1px solid #8a8a8a;
+    overflow: hidden;
+    background: #fff;
 }
 
 .hero > img {
-    display: block;
     width: 100%;
     height: auto;
-    border-radius: 12px;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 18px;
     left: 0;
     right: 0;
-    padding: 15px;
     text-align: center;
-    background-color: rgba(7, 59, 76, 0.8);
-    color: white;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 12px 16px;
+    color: var(--primary-color);
 }
 
 .hero article {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 12px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 16px;
+    border: 1px solid #b9b9b9;
+    border-radius: 8px;
 }
 
 .hero article img {
     float: right;
     width: 125px;
-    margin-left: 15px;
+    margin-left: 16px;
     border: 2px solid var(--primary-color);
-    box-shadow: 2px 2px 8px gray;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
 }
 
-/* HISTORY / INFO GRID */
-.history,
-.trip-section {
-    padding: 20px 0;
+/* MAIN SECTIONS */
+main > section {
+    margin-top: 14px;
+    padding: 20px;
+    border: 1px solid #8a8a8a;
+    background: #fff;
 }
 
 .history h2,
+.adventures h2,
 .trip-section h2,
-.contact-main h2,
-.team-section h2 {
+.team-section h2,
+.contact-main h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+}
+
+/* HISTORY */
+.history > p {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .history-content {
@@ -132,6 +163,12 @@ header nav a:hover {
     grid-template-columns: 1fr 220px 1fr;
     gap: 20px;
     align-items: center;
+    margin-top: 12px;
+}
+
+.history-content p {
+    margin: 0;
+    text-align: left;
 }
 
 .history-content img {
@@ -141,29 +178,30 @@ header nav a:hover {
 
 /* ADVENTURES */
 .adventures {
-    padding: 20px 0;
-}
-
-.adventures h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    padding-bottom: 22px;
 }
 
 .adventure-gallery {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    gap: 14px;
+    align-items: start;
 }
 
 .adventure-gallery figure {
+    margin: 0;
     text-align: center;
+    border: 1px solid var(--accent2-color);
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
 }
 
 .adventure-gallery img {
     width: 100%;
     height: 120px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .adventure-gallery figcaption {
@@ -183,6 +221,7 @@ header nav a:hover {
     padding: 16px;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
 }
 
 .trip-card img {
@@ -211,6 +250,7 @@ header nav a:hover {
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
 }
 
 .contact-details address {
@@ -306,7 +346,8 @@ button {
 }
 
 button:hover {
-    background: #09563f;
+    background: var(--accent2-color);
+    color: var(--accent1-color);
 }
 
 /* TEAM SECTION */
@@ -326,6 +367,7 @@ button:hover {
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     text-align: center;
+    border: 1px solid #e5e7eb;
 }
 
 .team-gallery img {
@@ -346,18 +388,22 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    padding: 15px 0 25px;
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
+    padding: 14px 18px;
+    margin-top: 16px;
+    background: var(--secondary-color);
+    border: 1px solid #8a8a8a;
 }
 
 footer p {
+    flex: 1;
+    text-align: center;
     margin: 0;
 }
 
 .socialmedia {
     display: flex;
     gap: 10px;
+    margin-left: auto;
 }
 
 .socialmedia a {
@@ -367,8 +413,10 @@ footer p {
 .socialmedia img {
     width: 32px;
     height: 32px;
+    display: block;
 }
 
+/* RESPONSIVE */
 @media (max-width: 800px) {
 
     .history-content,
@@ -390,9 +438,18 @@ footer p {
         gap: 12px;
     }
 
+    header nav {
+        justify-content: center;
+    }
+
     footer {
         flex-direction: column;
         text-align: center;
+    }
+
+    .socialmedia {
+        margin-left: 0;
+        justify-content: center;
     }
 }
 
@@ -404,6 +461,9 @@ footer p {
     .hero article {
         position: static;
         margin-top: 12px;
+        left: auto;
+        right: auto;
+        bottom: auto;
     }
 
     .hero h1 {
