@@ -53,7 +53,6 @@ p {
     line-height: 1.6;
 }
 
-/* HEADER */
 header {
     display: grid;
     grid-template-columns: 140px 1fr;
@@ -100,7 +99,6 @@ header nav a[aria-current="page"] {
     color: var(--accent1-color);
 }
 
-/* HERO */
 .hero {
     position: relative;
     margin-top: 12px;
@@ -125,7 +123,7 @@ header nav a[aria-current="page"] {
     color: var(--primary-color);
 }
 
-.hero-message {
+.hero article {
     position: absolute;
     left: 24px;
     right: 24px;
@@ -137,7 +135,7 @@ header nav a[aria-current="page"] {
     display: flow-root;
 }
 
-.hero-message img {
+.hero article img {
     float: right;
     width: 125px;
     margin-left: 16px;
@@ -147,7 +145,6 @@ header nav a[aria-current="page"] {
     border-radius: 8px;
 }
 
-/* MAIN SECTIONS */
 main > section {
     margin-top: 14px;
     padding: 20px;
@@ -160,7 +157,6 @@ main > section h2 {
     margin-bottom: 18px;
 }
 
-/* NEWSLETTER */
 .newsletter {
     text-align: center;
 }
@@ -219,7 +215,6 @@ button:hover,
     color: var(--accent1-color);
 }
 
-/* HOME: GRID CONTENT */
 .highlights {
     padding-bottom: 22px;
 }
@@ -250,7 +245,6 @@ button:hover,
     margin-bottom: 8px;
 }
 
-/* ADVENTURES / GALLERY */
 .adventures {
     padding-bottom: 22px;
 }
@@ -283,7 +277,6 @@ button:hover,
     font-size: 0.9rem;
 }
 
-/* TRIPS PAGE */
 .call-to-action {
     text-align: center;
 }
@@ -369,7 +362,6 @@ button:hover,
     padding-bottom: 22px;
 }
 
-/* CONTACT PAGE */
 .contact-intro {
     text-align: center;
 }
@@ -402,8 +394,6 @@ button:hover,
 
 .map-embed iframe {
     width: 100%;
-    min-height: 100%;
-    height: 100%;
     min-height: 420px;
     border: 0;
     border-radius: 12px;
@@ -451,7 +441,6 @@ legend {
     height: 18px;
 }
 
-/* TEAM SECTION */
 .team-section {
     padding: 20px 0;
 }
@@ -483,7 +472,6 @@ legend {
     font-size: 0.95rem;
 }
 
-/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
@@ -517,7 +505,6 @@ footer p {
     display: block;
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
 
     .grid-content,
@@ -555,17 +542,17 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    .hero-message {
-        position: static;
-        margin: 12px;
-    }
-
     .hero h1 {
         position: static;
         margin-bottom: 0;
     }
 
-    .hero-message img {
+    .hero article {
+        position: static;
+        margin: 12px;
+    }
+
+    .hero article img {
         float: none;
         width: 100%;
         margin: 0 0 12px 0;
