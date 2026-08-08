@@ -5,76 +5,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Explore rafting trips, adventure packages, and booking options with White Water Rafting.">
+      content="Explore White Water Rafting trips, adventure packages, equipment, and booking options.">
     <meta name="author" content="Lucas Perez Echeimberg">
     <title>Trips | White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <header>
-        <img src="images/logo.jpg" alt="White Water Rafting Logo">
 
-        <nav>
+    <header>
+        <a href="index.html" aria-label="White Water Rafting Home">
+            <img src="images/logo.jpg" alt="White Water Rafting Logo">
+        </a>
+
+        <nav aria-label="Main Navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
+            <a href="trips.html" aria-current="page">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <img src="images/hero.jpg" alt="Rafting trip adventure">
-            <h1>Our Trips</h1>
 
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy customer">
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Group enjoying a white water rafting adventure">
+
+            <h1>Our Rafting Trips</h1>
+
+            <article class="hero-message">
+                <img src="images/happy-client.jpg" alt="Happy customer after rafting">
+
                 <p>
-                    Choose the perfect rafting experience for your group. From beginner-friendly
-                    runs to thrilling rapids, we have the right trip for every adventurer.
+                    Whether you're looking for a relaxing family float or an adrenaline-filled
+                    adventure, we have the perfect rafting experience waiting for you.
                 </p>
             </article>
         </section>
 
+        <section class="call-to-action">
+            <h2>Ready for Your Next Adventure?</h2>
+
+            <p>
+                Contact our friendly staff today and let us help you choose the perfect rafting
+                trip for your family, friends, or group.
+            </p>
+
+            <a class="cta-button" href="contact.html">Contact Us</a>
+        </section>
+
         <section class="trip-section">
-            <h2>Trip Options</h2>
+            <h2>Featured Trips</h2>
 
             <div class="trip-cards">
+
                 <article class="trip-card">
                     <img src="images/rafting2.jpg" alt="Half Day Adventure">
+
                     <h3>Half Day Adventure</h3>
+
                     <p>
-                        A great introduction to white water rafting for beginners, families, and
-                        groups who want a fun experience without a full-day commitment.
+                        Perfect for beginners and families looking for an exciting introduction to
+                        white water rafting. Enjoy beautiful scenery and moderate rapids with our
+                        experienced guides.
                     </p>
                 </article>
 
                 <article class="trip-card">
                     <img src="images/rafting1.jpg" alt="Full Day Rapids">
+
                     <h3>Full Day Rapids</h3>
+
                     <p>
-                        A more intense trip with more time on the water, ideal for adventure seekers
-                        who want a bigger challenge and more excitement.
+                        Spend the entire day on the river tackling exciting rapids while enjoying
+                        lunch and breathtaking canyon views. Great for adventurous groups.
                     </p>
                 </article>
 
                 <article class="trip-card">
-                    <img src="images/rafting3.jpeg" alt="Rapid Runner">
+                    <img src="images/rafting3.jpeg" alt="Rapid Runner Adventure">
+
                     <h3>Rapid Runner</h3>
+
                     <p>
-                        Fast-paced rapids, beautiful scenery, and a high-energy experience for
-                        guests
-                        looking for a thrilling ride.
+                        Designed for thrill seekers who want fast-moving rapids, challenging water,
+                        and an unforgettable adrenaline rush.
                     </p>
                 </article>
+
             </div>
         </section>
 
-        <section class="trip-section">
+        <section class="equipment">
+            <h2>Equipment Included</h2>
+
+            <p>
+                Every trip includes professional rafting guides, helmets, life jackets, paddles,
+                rafts, and safety equipment. Guests should bring comfortable clothing, water shoes,
+                sunscreen, and a refillable water bottle.
+            </p>
+        </section>
+
+        <section class="trip-summary">
+
+            <h2>Trip Comparison</h2>
+
+            <table>
+
+                <caption>Available Rafting Trips</caption>
+
+                <thead>
+                    <tr>
+                        <th>Trip</th>
+                        <th>Duration</th>
+                        <th>Difficulty</th>
+                        <th>Equipment Included</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Half Day Adventure</td>
+                        <td>4 Hours</td>
+                        <td>Easy</td>
+                        <td>Helmet, Life Jacket, Paddle</td>
+                        <td>$79</td>
+                    </tr>
+
+                    <tr>
+                        <td>Full Day Rapids</td>
+                        <td>1 Day</td>
+                        <td>Moderate</td>
+                        <td>Full Equipment + Lunch</td>
+                        <td>$149</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rapid Runner</td>
+                        <td>2 Hours</td>
+                        <td>Advanced</td>
+                        <td>Helmet, Life Jacket, Paddle</td>
+                        <td>$99</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="destinations">
+
             <h2>Popular Destinations</h2>
 
             <div class="adventure-gallery">
+
                 <figure>
                     <img src="images/rafting.jpeg" alt="Los Dientes del Diablo">
                     <figcaption>Los Dientes del Diablo</figcaption>
@@ -99,14 +186,19 @@
                     <img src="images/rafting4.jpeg" alt="Whitewater Rush">
                     <figcaption>Whitewater Rush</figcaption>
                 </figure>
+
             </div>
+
         </section>
+
     </main>
 
     <footer>
+
         <p>&copy; 2026 White Water Rafting | Lucas Perez Echeimberg</p>
 
-        <nav class="socialmedia">
+        <nav class="socialmedia" aria-label="Social Media">
+
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/facebook.png" alt="Facebook">
             </a>
@@ -118,8 +210,11 @@
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/instagram.jpg" alt="Instagram">
             </a>
+
         </nav>
+
     </footer>
+
 </body>
 
 </html>

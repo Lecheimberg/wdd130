@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="White Water Rafting home page with adventures, booking info, and company highlights.">
+      content="White Water Rafting home page featuring adventure options, company highlights, and a newsletter sign-up.">
     <meta name="author" content="Lucas Perez Echeimberg">
-    <title>White Water Rafting | Home</title>
-
+    <title>Home | White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-
     <header>
-        <img src="images/logo.jpg" alt="White Water Rafting Logo">
-
-        <nav>
-            <a href="index.html">Home</a>
+        <a href="index.html" aria-label="White Water Rafting home">
+            <img src="images/logo.jpg" alt="White Water Rafting logo">
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
             <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
@@ -26,103 +25,117 @@
     </header>
 
     <main>
-
         <section class="hero">
-            <img src="images/hero.jpg" alt="White Water Rafting Adventure">
-
+            <img src="images/hero.jpg" alt="White water rafting adventure on a fast-moving river">
             <h1>White Water Rafting</h1>
 
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy client enjoying rafting">
-
+            <article class="hero-message">
+                <img src="images/happy-client.jpg" alt="Happy client enjoying a rafting trip">
                 <p>
                     Experience unforgettable white water rafting adventures with expert guides,
                     breathtaking scenery, and exciting trips for all skill levels.
                 </p>
+                <a class="cta-button" href="trips.html">View Our Trips</a>
             </article>
         </section>
 
-        <section class="history">
+        <section class="newsletter">
+            <h2>Join Our Newsletter</h2>
+            <p>Get updates on trips, seasonal deals, and rafting news.</p>
 
+            <form action="#" method="post" class="newsletter-form">
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address"
+                      required>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <section class="highlights">
             <h2>Why Choose Us?</h2>
 
-            <div class="history-content">
+            <div class="grid-content">
+                <article class="highlight-card">
+                    <img src="images/rafting1.jpg"
+                      alt="Rafting adventure on calm and exciting water">
+                    <h3>Safe and Fun</h3>
+                    <p>
+                        We provide memorable rafting trips with experienced guides, quality
+                        equipment,
+                        and a strong focus on safety for families, groups, and first-time
+                        adventurers.
+                    </p>
+                </article>
 
-                <p>
-                    We are passionate about providing safe, fun, and memorable rafting adventures
-                    for families, friends, and outdoor enthusiasts.
-                </p>
-
-                <img src="images/rafting1.jpg" alt="Rafting Adventure">
-
-                <p>
-                    Our professional guides and outstanding customer service make every trip an
-                    unforgettable experience.
-                </p>
-
+                <article class="highlight-card">
+                    <img src="images/rafting2.jpg" alt="Group enjoying a guided rafting excursion">
+                    <h3>Trips for Everyone</h3>
+                    <p>
+                        From relaxed scenic floats to thrilling rapids, we offer adventures that
+                        match
+                        different skill levels and make it easy to choose the right experience.
+                    </p>
+                </article>
             </div>
-
         </section>
 
         <section class="adventures">
-
             <h2>Adventure Awaits You!</h2>
 
             <div class="adventure-gallery">
-
                 <figure>
-                    <img src="images/rafting.jpeg" alt="Los Dientes del Diablo">
+                    <img src="images/rafting.jpeg" alt="Los Dientes del Diablo rafting run">
                     <figcaption>Los Dientes del Diablo</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/rafting1.jpg" alt="Big Mallard">
+                    <img src="images/rafting1.jpg" alt="Big Mallard rafting route">
                     <figcaption>Big Mallard</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/rafting2.jpg" alt="Half Day Adventure">
+                    <img src="images/rafting2.jpg" alt="Half Day Adventure rafting trip">
                     <figcaption>Half Day Adventure</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/rafting3.jpeg" alt="Rapid Runner">
+                    <img src="images/rafting3.jpeg" alt="Rapid Runner rafting adventure">
                     <figcaption>Rapid Runner</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/rafting4.jpeg" alt="Whitewater Rush">
+                    <img src="images/rafting4.jpeg" alt="Whitewater Rush rafting adventure">
                     <figcaption>Whitewater Rush</figcaption>
                 </figure>
-
             </div>
-
         </section>
-
     </main>
 
     <footer>
-
         <p>&copy; 2026 White Water Rafting | Lucas Perez Echeimberg</p>
 
-        <nav class="socialmedia">
-
-            <a href="https://facebook.com" target="_blank">
+        <nav class="socialmedia" aria-label="Social media links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/facebook.png" alt="Facebook">
             </a>
 
-            <a href="https://twitter.com" target="_blank">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/twitter.png" alt="Twitter">
             </a>
 
-            <a href="https://instagram.com" target="_blank">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/instagram.jpg" alt="Instagram">
             </a>
-
         </nav>
-
     </footer>
-
 </body>
 
 </html>
